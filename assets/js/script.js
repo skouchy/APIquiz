@@ -1,40 +1,119 @@
-const startButton = document.getElementById("#start-btn");
-let currentQuestion = document.getElementById("#current-question")[0];
-let currentAnswers = document.getElementsByClassName('.current-answers')[0];
-let optionA = document.getElementById('#spanA');
-let optionB = document.getElementById('#spanB');
-let optionC = document.getElementById('#spanC');
-let optionD = document.getElementById('#spanD');
-const nextQuestion = document.getElementById('#next-btn');
-let initials = document.getElementById('#user-input');
-let submitUser = document.getElementById('#submit-btn')
-let scoreBoard = document.getElementById('#scoreboard')
-const resetBtn = document.getElementById('#clear-scores-btn');
-const backToStartBtn = document.getElementById('#start-over-btn');
-let timerCount = "";
-let questionIndex = 0;
+const quizBits = [
+    [ //quizBits[0][0-3]
+        ["If javaScript was an icecream, what flavor would it be?"],
+        ["What does DOM stand for?"],
+        ["What purpose does JavaScript have on a browser's content?"],
+        ["Which of these is NOT a <button> type?"]
+    ]
+    ,
+    [//quizBits[1][0-3][0-3]
+        ["coffee",
+            "rockyRoad",
+            "vanilla",
+            ("allTheAbove".valueOf = true)]
+        ,
+        ["departmentOfMondays",
+            "dressingOddMonkeys",
+            ("Document Object Model".valueOf = true), "defendOurMemories"]
+        ,
+        ["makesItPretty", ("allowsAnInteractiveExperience".valueOf = true),
+            "disablesAllFunctionality", "deliversHotCoffeeToYourDeskForFocusedWebSurfing"]
+        ,
+        ["reset",
+            ("zipper".valueOf = true),
+            "button",
+            "submit"]
+    ]]
+console.log(quizBits);
+
+const startButton = document.getElementById('start-btn');
+let currentQuestion = document.getElementById("current-question");
+let optionA = document.getElementById("clickA");
+let optionB = document.getElementById("clickB");
+let optionC = document.getElementById("clickC");
+let optionD = document.getElementById("clickD");
+let timerCount = document.getElementById('timer-count');
+let score = [];
+let timeStart = 75;
+timerEl.textContent = timeStart;
+const nextQuestion = document.getElementById('next-btn');
+// let multipleChoice = document.querySelector('.multiple-choice');
+// let currentAnswers = document.getElementsByClassName('.current-answers');
+// let optionA = document.getElementById('#spanA');
+// let optionB = document.getElementById('#spanB');
+// let optionC = document.getElementById('#spanC');
+// let optionD = document.getElementById('#spanD');
+// let initials = document.getElementById('#user-input');
+// let submitUser = document.getElementById('#submit-btn')
+// let scoreBoard = document.getElementById('#scoreboard')
+// const resetBtn = document.getElementById('#clear-scores-btn');
+// const backToStartBtn = document.getElementById('#start-over-btn');
+// let questionIndex = 0;
 // var timer;
 
-const questions = [
-    "If javaScript was an icecream, what flavor would it be?",
-    "What does DOM stand for?",
-    "What purpose does JavaScript have on a browser's content?",
-    "Which of these is NOT a <button> type?"
-]
+// function startGame() {
+//     var render = nextQuestion.style.display = 'block';
+//     console.log("clicked");
+//     }
+function startGame() {
+    document.getElementById('start-home').style.display = "none";
+    document.getElementById('quiz').style.display = "block";
+    startTimer();
+    quizContent();
+}
 
-const correct =  [
-    "allTheAbove", 
-    "Document Object Model",
-    "allowsAnInteractiveExperience",
-    "zipper"
-]
-const notCorrect = [
-["coffee", "rockyRoad", "vanilla"],    
-["departmentOfMondays", "dressingOldMonkeys", "defendOurMemories"],   
-["makesItPretty", "disablesAllFunctionality", "deliversHotCoffeeToYourDeskForFocusedWebSurfing"],
-["reset", "button", "submit"]
-]
-    // event.target 
+function startTimer(event) {
+    // Sets timer
+    //   render(timeStart);
+    timer = setInterval(function () {
+        timerCount = timeStart--;
+        timerEl.textContent = timeStart;
+
+        // if (timerCount >= 0) {
+        //   if (completeQuiz && timerCount > 0) {
+        //     // Clears interval and stops timer
+        //     // clearInterval(timer);
+        //     var score = timerCount[''] * numberCorrect[''];
+        //   }
+        // }
+        // // Tests if time has run out
+        // if (timerCount === 0) {
+        //   // Clears interval
+        //   clearInterval(timer);
+        //   loseGame();
+        // }
+    }, 1000);
+}
+
+currentQuestion = quizBits[0][0],
+    optionA = quizBits[1][0][0],
+    optionB = quizBits[1][0][1],
+    optionC = quizBits[1][0][2],
+    optionD = quizBits[1][0][3];
+
+    console.log(currentQuestion);
+    console.log(optionA);
+    console.log(optionB);
+    console.log(optionC);
+    console.log(optionD);
+
+function quizContent() {
+
+    userChoice();
+
+    function userChoice() {
+        if (value === true) {
+            let points = 3;
+            score = points.concat(score);
+        }
+        else {
+            timerCount = (timerCount) - points;
+        }
+
+    }
+}
+startButton.addEventListener("click", startGame);
+// event.target
 // var timerCount;
 // var wordBlank = document.querySelector(".word-blanks");
 // var win = document.querySelector(".win");
@@ -50,11 +129,68 @@ const notCorrect = [
 
 // startButton.addEventListener("click", startGame);
 
-// // Calls init() so that it fires when page opened
+// Calls init() so that it fires when page opened
 // init();
 
-// // Bonus: Add reset button
-// var resetButton = document.querySelector(".reset-button");
+// const button = document.querySelector('#button');
+
+// const disableButton = () => {
+//     button.disabled = true;
+// };
+
+// button.addEventListener('click', disableButton);
+
+// nextQuestion.addEventListener("click", renderNext());nextQuestion.style.display = "block";
+
+// optionA.addEventListener("click", choiceAnswer);
+// function choiceAnswer(event) {
+
+// }
+
+// optionB.addEventListener("click", choiceAnswer);
+// function choiceAnswer(event) {
+
+// }
+// optionC.addEventListener("click", choiceAnswer);
+// function choiceAnswer(event) {
+
+// }
+// optionD.addEventListener("click", choiceAnswer);
+// function choiceAnswer(event) {
+
+// }
+
+// let startQuestion = questions[0];
+// console.log(startQuestion);
+// let currentAnswers = notCorrect[0].concat(correct[0]);
+// console.log(currentAnswers);
+// let questionStuff = document.querySelector('.current-answers');
+// console.log(questionStuff);
+
+// function renderNext() {
+//     for(let index = 0, n = questions.length; index < n; index++) {
+//         displayedList = ([questions[index++]] + [currentAnswers]);
+//     }
+//     // const currentQuestion = questions[0];
+//     console.log(displayedList);
+
+
+//     //     // render(currentQuestion);
+//     //     // render(currentAnswers);
+// }
+// console.log(renderNext);
+// console.log(currentQuestion);
+// console.log(displayedList);
+// currentAnswers = function (){
+//     return (notCorrect.findIndex[0].push(correct.findIndex[0], [notCorrect.findIndex[0]]));
+// }
+// console.log (notCorrect.index[0]);
+// console.log(currentAnswers);
+
+
+
+// Bonus: Add reset button
+var resetButton = document.querySelector(".reset-button");
 
 // // Arrays used to create blanks and letters on screen
 // var lettersInChosenWord = [];
@@ -63,7 +199,7 @@ const notCorrect = [
 // // Array of words the user will guess
 // var words = ["variable","array", "modulus", "object", "function", "string", "boolean"];
 
-// // The init function is called when the page loads 
+// // The init function is called when the page loads
 // function init() {
 //   getWins();
 //   getlosses();
@@ -96,27 +232,7 @@ const notCorrect = [
 // }
 
 // // The setTimer function starts and stops the timer and triggers winGame() and loseGame()
-// function startTimer() {
-//   // Sets timer
-//   timer = setInterval(function() {
-//     timerCount--;
-//     timerElement.textContent = timerCount;
-//     if (timerCount >= 0) {
-//       // Tests if win condition is met
-//       if (isWin && timerCount > 0) {
-//         // Clears interval and stops timer
-//         clearInterval(timer);
-//         winGame();
-//       }
-//     }
-//     // Tests if time has run out
-//     if (timerCount === 0) {
-//       // Clears interval
-//       clearInterval(timer);
-//       loseGame();
-//     }
-//   }, 1000);
-// }
+//
 
 // // Creates blanks on screen
 // function renderBlanks() {
@@ -226,4 +342,5 @@ const notCorrect = [
 // }
 // // Attaches event listener to button
 // resetButton.addEventListener("click", resetGame);
+//
 // document.getElementById("clear-scores").disabled = true;
