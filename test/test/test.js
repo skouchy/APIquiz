@@ -14,7 +14,7 @@
 //     }
 
  
-}
+
 
 // var count = 0;
 // //  Select increment and decrement button elements
@@ -40,38 +40,38 @@
 //     setCounterText();
 //   }
 // });
-var truth =  [
-    "q1" , "Doc Object Model" , "q3" , "q4"
-]
-var falser {
-    Q1 = ["false1", "false2", "false 3"]
-    Q2 = ["department of Moms", "Destructing Odd Monkeys", false3]
-    Q3 = [false1, false2, false3]
-    Q4 = [false1, false2, false3]
-    // event.target 
+// var truth =  [
+//     "q1" , "Doc Object Model" , "q3" , "q4"
+// ]
+// var falser {
+//     Q1 = ["false1", "false2", "false 3"]
+//     Q2 = ["department of Moms", "Destructing Odd Monkeys", false3]
+//     Q3 = [false1, false2, false3]
+//     Q4 = [false1, false2, false3]
+//     // event.target 
 
-do {
-function question{
-    display(falser.q2[]
-        (push.arrayTruth[2])
+// do {
+// function question{
+//     display(falser.q2[]
+//         (push.arrayTruth[2])
         
         
-        addEventListener("click", "display next question button")
-        if (truth){
-            points++, 
-        alert("good fuckin job dood!")
+//         addEventListener("click", "display next question button")
+//         if (truth){
+//             points++, 
+//         alert("good fuckin job dood!")
         
-    }
-    else {
-        function(time--),
-        alert("wrong!")
-    }
-}
-while {
-    increment(index < 4) || time > 0;
-}
+//     }
+//     else {
+//         function(time--),
+//         alert("wrong!")
+//     }
+// }
+// while {
+//     increment(index < 4) || time > 0;
+// }
 
-    question[index++]
+//     question[index++]
 
 
 
@@ -125,26 +125,26 @@ while {
 
 
 // // questions.style.background-color: yellow;
-question.setAttribute("hide")
-console.log(question.length);
+// question.setAttribute("hide")
+// console.log(question.length);
 
-function navigate(direction) {
-  index = index + direction;
-  if (index < 0) { 
-    index = question.length - 1; 
-  } else if (index > question.length - 1) { 
-    index = 0;
-  }
-  currentQuestion = question[index];
-  question = "" + currentQuestion + "";
-}
+// function navigate(direction) {
+//   index = index + direction;
+//   if (index < 0) { 
+//     index = question.length - 1; 
+//   } else if (index > question.length - 1) { 
+//     index = 0;
+//   }
+//   currentQuestion = question[index];
+//   question = "" + currentQuestion + "";
+// }
 
 // // Clicking on image opens a new window containing the image
 // // question.children(ol).children().addEventListener("click", function() {
 // //   window.location.href = question[index];
 // // });
 
-function myGeeks() {
-    document.getElementById("a").innerHTML
-        = 'A computer science portal for geeks';
-}
+// function myGeeks() {
+//     document.getElementById("a").innerHTML
+//         = 'A computer science portal for geeks';
+// }

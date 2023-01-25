@@ -1,16 +1,60 @@
+const startButton = document.getElementById("#start-btn");
+let currentQuestion = document.getElementById("#current-question")[0];
+let currentAnswers = document.getElementsByClassName('.current-answers')[0];
+let optionA = document.getElementById('#spanA');
+let optionB = document.getElementById('#spanB');
+let optionC = document.getElementById('#spanC');
+let optionD = document.getElementById('#spanD');
+const nextQuestion = document.getElementById('#next-btn');
+let initials = document.getElementById('#user-input');
+let submitUser = document.getElementById('#submit-btn')
+let scoreBoard = document.getElementById('#scoreboard')
+const resetBtn = document.getElementById('#clear-scores-btn');
+const backToStartBtn = document.getElementById('#start-over-btn');
+let timerCount = "";
+let questionIndex = 0;
+// var timer;
+
+const questions = [
+    "If javaScript was an icecream, what flavor would it be?",
+    "What does DOM stand for?",
+    "What purpose does JavaScript have on a browser's content?",
+    "Which of these is NOT a <button> type?"
+]
+
+const correct =  [
+    "allTheAbove", 
+    "Document Object Model",
+    "allowsAnInteractiveExperience",
+    "zipper"
+]
+const notCorrect = [
+["coffee", "rockyRoad", "vanilla"],    
+["departmentOfMondays", "dressingOldMonkeys", "defendOurMemories"],   
+["makesItPretty", "disablesAllFunctionality", "deliversHotCoffeeToYourDeskForFocusedWebSurfing"],
+["reset", "button", "submit"]
+]
+    // event.target 
+// var timerCount;
 // var wordBlank = document.querySelector(".word-blanks");
 // var win = document.querySelector(".win");
 // var lose = document.querySelector(".lose");
 // var timerElement = document.querySelector(".timer-count");
-// var startButton = document.querySelector(".start-button");
 
 // var chosenWord = "";
 // var numBlanks = 0;
 // var winCounter = 0;
 // var loseCounter = 0;
 // var isWin = false;
-// var timer;
-// var timerCount;
+
+
+// startButton.addEventListener("click", startGame);
+
+// // Calls init() so that it fires when page opened
+// init();
+
+// // Bonus: Add reset button
+// var resetButton = document.querySelector(".reset-button");
 
 // // Arrays used to create blanks and letters on screen
 // var lettersInChosenWord = [];
@@ -170,13 +214,7 @@
 // });
 
 // // Attach event listener to start button to call startGame function on click
-// startButton.addEventListener("click", startGame);
 
-// // Calls init() so that it fires when page opened
-// init();
-
-// // Bonus: Add reset button
-// var resetButton = document.querySelector(".reset-button");
 
 // function resetGame() {
 //   // Resets win and loss counts
@@ -188,3 +226,4 @@
 // }
 // // Attaches event listener to button
 // resetButton.addEventListener("click", resetGame);
+// document.getElementById("clear-scores").disabled = true;
