@@ -47,6 +47,7 @@ let position = 0;
 let points = 0;
 let timerEl = document.getElementById('timer-count');
 let time = 45;
+let interval;
 timerEl.textContent = time;
 const userContainer = document.getElementById('store-user');
 let userInput = document.getElementById('user-input');
@@ -74,7 +75,7 @@ function hideStart() {
 
 function startGame() {
     document.getElementById('quiz').style.display = "block";
-    setInterval(function () {
+    interval = setInterval(function () {
         timerCount = time--,
             timerEl.textContent = time
     }, 1000);
@@ -99,7 +100,7 @@ function submitName() {
 const userChoice = ("click", function (event) {
     console.log('made it to userChoice');
     // console.log(event.target.textContent);
-    if (event.target.textContent === quizContent[0].answer) {
+    if (event.target.textContent === quizContent[position].answer) {
         console.log('is it a string or nah');
         points += 3;
     } else {
@@ -113,7 +114,7 @@ const userChoice = ("click", function (event) {
         // const element = array[index];
         userContainer.style.display = 'block';
         document.getElementById('quiz').style.display = "none";
-        // clearInterval();
+        clearInterval(interval);
     };
 
 });
