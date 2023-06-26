@@ -221,10 +221,12 @@
 // // resetButton.addEventListener("click", resetGame);
 // //
 // // document.getElementById("clear-scores").disabled = true;
-let submitButtonEl = document.querySelector('#submit-btn');
-let userListEl = document.querySelector('#users');
+let formEl = document.querySelector('#user-input-form');
+let userListEl = document.querySelector('#user-list');
 
-let inputUserHandler = function() {
+const inputUserHandler = function(event) {
+    event.preventDefault();
+    console.log(event);
     let userScoreEl = document.createElement("li");
     userScoreEl.className = "user-score";
     userScoreEl.textContent = "<user-initials>";
@@ -232,7 +234,7 @@ let inputUserHandler = function() {
     
 };
 
-submitButtonEl.addEventListener('click', inputUserHandler); 
+formEl.addEventListener('submit', inputUserHandler); 
 
 
 
