@@ -78,7 +78,7 @@
 // function startGame() {
 //     document.getElementById('quiz').style.display = "block";
 //     interval = setInterval(function () {
-//         timerCount = time--,
+        // timerCount = time--,
 //             timerEl.textContent = time
 //     }, 1000);
 //     hideStart();
@@ -151,7 +151,7 @@
 // // // The startGame function is called when the start button is clicked
 // // function startGame() {
 // //   isWin = false;
-// //   timerCount = 10;
+//   timerCount = 10;
 
 
 // // // The loseGame function is called when timer reaches 0
@@ -223,10 +223,47 @@
 // // document.getElementById("clear-scores").disabled = true;
 const formEl = document.querySelector('#user-input-form');
 const userListEl = document.querySelector('#user-list');
-const correctAnswerBtn = document.querySelector('.correct');
-const wrongAnswerBtn = document.querySelector('.multiple-choice');
+const startQuizBtn = document.getElementById('start-btn');
 const quizQuestionBtns = document.querySelectorAll('.quiz-btn');
+const timerEl = document.getElementById('timer');
+// const correctAnswerBtns = document.querySelectorAll('.correct');
+let timerCount = 8;
+let time;
 
+// Display 60 seconds on the clock
+timerEl.textContent = timerCount;
+
+function quizEnd() {
+    clearInterval(time);
+}
+
+function startTimer() {
+    timerCount--;
+    console.log(timerCount);
+    timerEl.textContent = timerCount;
+    if (timerCount <= 0) {
+        quizEnd();
+        console.log('Your time is up!');
+    };
+};
+
+function startQuiz() {
+    //* render Question 1 Logic
+    //? get Start page w/ ElementById
+    //? setAttribute(init, set) to hide Start
+
+    //?unhide Q1 by remove attribute
+
+    // Start timer
+    time = setInterval(startTimer, 1000);
+
+    showQuestion();
+
+}
+
+function showQuestion() {
+
+}
 // ? taskFormHandler
 const userInputHandler = function (event) {
     event.preventDefault();
@@ -282,15 +319,23 @@ const multipleChoiceHandler = function (event) {
     } else {
         console.log('DUMBDUMB');
     }
-}
+};
 
-formEl.addEventListener('submit', userInputHandler);
+
+
+startQuizBtn.addEventListener('click', startQuiz);
+
 quizQuestionBtns.forEach(function (button) {
     button.addEventListener('click', (event) => {
         console.log(event.target);
         multipleChoiceHandler(event);
     });
 });
+
+
+formEl.addEventListener('submit', userInputHandler);
+
+
 
 
 
