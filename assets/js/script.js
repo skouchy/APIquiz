@@ -224,17 +224,47 @@
 let formEl = document.querySelector('#user-input-form');
 let userListEl = document.querySelector('#user-list');
 
-const inputUserHandler = function(event) {
+// ? taskFormHandler
+const userInputHandler = function(event) {
     event.preventDefault();
     console.log(event);
-    let userScoreEl = document.createElement("li");
-    userScoreEl.className = "user-score";
-    userScoreEl.textContent = "<user-initials>";
-    userListEl.appendChild(userScoreEl);
-    
+// ? taskNameInput
+    let userNameInput = document.querySelector("input[name='user']").value;
+    console.dir(userNameInput);
+
+    // package up as data object
+    let userDataObj = {
+        name: userNameInput,
+        // ! REINTRODUCE ONCE SCORES ARE ACCOUNTED FOR
+        // score: userScoreRecord
+    }
+    // send as argument to userRecordEl
+    userRecordEl(userDataObj);
 };
 
-formEl.addEventListener('submit', inputUserHandler); 
+
+//? createTaskEl
+let userRecordEl = function(userDataObj) {
+    // create user to 'Score Board'
+    let userScoreEl = document.createElement("li");
+    userScoreEl.className = "user-score";
+    
+    // ! REINTRODUCE ONCE SCORES ARE ACCOUNTED FOR
+    // // create div to hold score
+    // ? taskInfoEl
+    let scoreEl = document.createElement('div');
+    scoreEl.className = "score";
+    // // add score to html
+    scoreEl.innerHTML = "<h4 id='user-input' style='strong'>" + userDataObj.name + "</h4>"; //<span class='score'>" + userDataObj.score + "</span>";
+    
+    userScoreEl.appendChild(scoreEl);
+    
+    // add user & score <li> to entire list
+    userListEl.appendChild(userScoreEl);
+
+}
+
+formEl.addEventListener('submit', userInputHandler); 
 
 
 
