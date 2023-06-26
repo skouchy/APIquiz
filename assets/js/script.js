@@ -221,14 +221,17 @@
 // // resetButton.addEventListener("click", resetGame);
 // //
 // // document.getElementById("clear-scores").disabled = true;
-let formEl = document.querySelector('#user-input-form');
-let userListEl = document.querySelector('#user-list');
+const formEl = document.querySelector('#user-input-form');
+const userListEl = document.querySelector('#user-list');
+const correctAnswerBtn = document.querySelector('.correct');
+const wrongAnswerBtn = document.querySelector('.multiple-choice');
+const quizQuestionBtns = document.querySelectorAll('.quiz-btn');
 
 // ? taskFormHandler
-const userInputHandler = function(event) {
+const userInputHandler = function (event) {
     event.preventDefault();
     console.log(event);
-// ? taskNameInput
+    // ? taskNameInput
     let userNameInput = document.querySelector("input[name='user']").value;
     console.dir(userNameInput);
 
@@ -250,11 +253,11 @@ const userInputHandler = function(event) {
 
 
 //? createTaskEl
-let userRecordEl = function(userDataObj) {
+let userRecordEl = function (userDataObj) {
     // create user to 'Score Board'
     let userScoreEl = document.createElement("li");
     userScoreEl.className = "user-score";
-    
+
     // ! REINTRODUCE ONCE SCORES ARE ACCOUNTED FOR
     // // create div to hold score
     // ? taskInfoEl
@@ -262,15 +265,33 @@ let userRecordEl = function(userDataObj) {
     scoreEl.className = "score";
     // // add score to html
     scoreEl.innerHTML = "<h4 id='user-input' style='strong'>" + userDataObj.name + "</h4>"; //<span class='score'>" + userDataObj.score + "</span>";
-    
+
     userScoreEl.appendChild(scoreEl);
-    
+
     // add user & score <li> to entire list
     userListEl.appendChild(userScoreEl);
 
 }
 
-formEl.addEventListener('submit', userInputHandler); 
+const multipleChoiceHandler = function (event) {
+
+    console.log(event.target);
+
+    if (event.target.matches('.correct')) {
+        console.log('SMARTY PANTS');
+    } else {
+        console.log('DUMBDUMB');
+    }
+}
+
+formEl.addEventListener('submit', userInputHandler);
+quizQuestionBtns.forEach(function (button) {
+    button.addEventListener('click', (event) => {
+        console.log(event.target);
+        multipleChoiceHandler(event);
+    });
+});
+
 
 
 
