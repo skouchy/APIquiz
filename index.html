@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>API Quiz</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
@@ -13,22 +13,23 @@
     <header>
         <h1 class="page-title">JavaScript FUN-da-Mentals</h1>
         <h2>Test your I.T. I.Q.</h2>
-        <div>Time Remaining:<span style="display: block;" id="timer-count"></span></div>
+        <div>Time Remaining:<span style="display: block" id="timer-count"></span></div>
     </header>
 
     <main class="page-content">
         <section class="container" id="start-home">
             <h3>Ready?</h3>
-            <p>Once you click "Start Quiz", the timer begins! You will have 75 seconds to complete 4 multiple choice questions about </p>
-            
+            <p>Once you click "Start Quiz", the timer begins! You will have 75 seconds to complete 4 multiple choice
+                questions about </p>
+
             <button class="btn" id="start-btn">Start Quiz</button>
         </section>
         <section class="quiz-wrapper" id="question1">
             <p id="q2" style="background-color: teal p-5">If javaScript was an icecream, what flavor would it be?</p>
-            <button class="multiple-choice" id="clickA">Coffee</button>
-            <button class="multiple-choice" id="clickB">rockyRoad</button>
-            <button class="multiple-choice" id="clickC">vanilla</button>
-            <button class="correct" id="clickD">allOfTheAbove</button>
+            <button class="multiple-choice" id="a1">Coffee</button>
+            <button class="multiple-choice" id="b1">rockyRoad</button>
+            <button class="multiple-choice" id="c1">vanilla</button>
+            <button class="correct" id="d1">allOfTheAbove</button>
             <!-- <div>
                 <button hidden id="next-btn">Next Question</button>
             </div> -->
@@ -70,6 +71,10 @@
         <section class="hidden container" id="scoreboard">
             <button id="start-over-btn">Beat your previous score!</button>
             <button type="reset" id="clear-scores-btn">Clear Highscores</button>
+            <h2 class="list-users-title">Score Board</h2>
+            <ul class="user-list" id="users">
+                <li class="user-score"></li>
+            </ul>
         </section>
 
     </main>
