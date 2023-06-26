@@ -22,53 +22,59 @@
             <p>Once you click "Start Quiz", the timer begins! You will have 75 seconds to complete 4 multiple choice
                 questions about </p>
 
-            <button class="btn" id="start-btn">Start Quiz</button>
+            <button class="btn btn" id="start-btn">Start Quiz</button>
         </section>
         <section class="quiz-wrapper" id="question1">
             <p id="q2" style="background-color: teal p-5">If javaScript was an icecream, what flavor would it be?</p>
-            <button class="multiple-choice" id="a1">Coffee</button>
-            <button class="multiple-choice" id="b1">rockyRoad</button>
-            <button class="multiple-choice" id="c1">vanilla</button>
-            <button class="correct" id="d1">allOfTheAbove</button>
+            <button class="btn multiple-choice" id="a1">Coffee</button>
+            <button class="btn multiple-choice" id="b1">rockyRoad</button>
+            <button class="btn multiple-choice" id="c1">vanilla</button>
+            <button class="btn correct" id="d1">allOfTheAbove</button>
             <!-- <div>
                 <button hidden id="next-btn">Next Question</button>
             </div> -->
         </section>
         <section class="quiz-wrapper" id="question2">
             <p id="q3" style="background-color: teal p-5">What does DOM stand for?</p>
-            <button class="multiple-choice" id="a2">departmentOfMondays</button>
-            <button class="multiple-choice" id="b2">dressingOldMonkeys</button>
-            <button class="correct" id="c2">documentObjectModel</button>
-            <button class="multiple-choice" id="d2">depressionOverMildew</button>
+            <button class="btn multiple-choice" id="a2">departmentOfMondays</button>
+            <button class="btn multiple-choice" id="b2">dressingOldMonkeys</button>
+            <button class="btn correct" id="c2">documentObjectModel</button>
+            <button class="btn multiple-choice" id="d2">depressionOverMildew</button>
             <!-- <div>
                 <button hidden id="next-btn">Next Question</button>
             </div> -->
         </section>
         <section class="quiz-wrapper" id="question3">
             <p id="q4" style="background-color: teal p-5">What purpose does JavaScript have on a browser's content?</p>
-            <button class="multiple-choice" id="a3">makes It Pretty</button>
-            <button class="correct" id="b3">allows An Interactive Experience</button>
-            <button class="multiple-choice" id="c3">disables All Functionality</button>
-            <button class="multiple-choice" id="d3">delivers Hot Coffee To Your Desk For Focused Web Surfing</button>
+            <button class="btn multiple-choice" id="a3">makes It Pretty</button>
+            <button class="btn correct" id="b3">allows An Interactive Experience</button>
+            <button class="btn multiple-choice" id="c3">disables All Functionality</button>
+            <button class="btn multiple-choice" id="d3">delivers Hot Coffee To Your Desk For Focused Web Surfing</button>
             <!-- <div>
                 <button hidden id="next-btn">Next Question</button>
             </div> -->
         </section>
         <section class="quiz-wrapper" id="question4">
             <p id="q1" style="background-color: teal p-5">Which of these is NOT a 'button' type attribute?</p>
-            <button class="multiple-choice" id="a4">reset</button>
-            <button class="correct" id="b4">zipper</button>
-            <button class="multiple-choice" id="c4">button</button>
-            <button class="multiple-choice" id="d4">submit</button>
+            <button class="btn multiple-choice" id="a4">reset</button>
+            <button class="btn correct" id="b4">zipper</button>
+            <button class="btn multiple-choice" id="c4">button</button>
+            <button class="btn multiple-choice" id="d4">submit</button>
             <!-- <div>
                 <button hidden id="next-btn">Next Question</button>
             </div> -->
         </section>
-        <section class="hidden container" id="store-user">
-            <input type="text" name="initials" id="user-input" placeholder="Enter your initials">
-            <button type="submit" id="submit-btn">Submit</button>
+        <section class="container" id="store-user">
+            <form id="user-input-form">
+                <div class="form-group">
+                    <input type="text" name="initials" id="user-input" placeholder="Enter your initials">
+                </div>
+                <div class="form-group">
+                    <button class="btn" type="submit" id="user-submit">Submit</button>
+                </div>
+            </form>
         </section>
-        <section class="hidden container" id="scoreboard">
+        <section class="container" id="scoreboard">
             <button id="start-over-btn">Beat your previous score!</button>
             <button type="reset" id="clear-scores-btn">Clear Highscores</button>
             <h2 class="list-users-title">Score Board</h2>

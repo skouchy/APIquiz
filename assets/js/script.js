@@ -224,7 +224,7 @@
 let submitButtonEl = document.querySelector('#submit-btn');
 let userListEl = document.querySelector('#users');
 
-let createUserHandler = function() {
+let inputUserHandler = function() {
     let userScoreEl = document.createElement("li");
     userScoreEl.className = "user-score";
     userScoreEl.textContent = "<user-initials>";
@@ -232,7 +232,7 @@ let createUserHandler = function() {
     
 };
 
-submitButtonEl.addEventListener('click', createUserHandler); 
+submitButtonEl.addEventListener('click', inputUserHandler); 
 
 
 
