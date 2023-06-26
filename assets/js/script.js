@@ -1,39 +1,39 @@
-let quizContent = [
-    {//question 1: quizContent[0]
-        question: "If javaScript was an icecream, what flavor would it be?",
-        choices: [
-            "coffee",
-            "rockyRoad",
-            "vanilla",
-            "allTheAbove"],
-        answer:"allTheAbove"
-    },
-    {//question 2: quizContent[1]
-        question: "What does DOM stand for?",
-        choices: [
-            "departmentOfMondays",
-            "dressingOddMonkeys",
-            "documentObjectModel",
-            "defendOurMemories"],
-        answer:"documentObjectModel"
-    },
-    {//question 3: quizContent[2]
-        question: "What purpose does JavaScript have on a browser's content?",
-        choices: [
-            "makesItPretty",
-            "allowsAnInteractiveExperience",
-            "disablesAllFunctionality", "deliversHotCoffeeToYourDeskForFocusedWebSurfing"],
-        answer:"allowsAnInteractiveExperience"
-    },
-    {//question 4: quizContent[3]
-        question: "Which of these is NOT a <button> type?",
-        choices: [
-            "reset",
-            "zipper",
-            "button",
-            "submit"],
-        answer:"zipper"
-    }];
+// let quizContent = [
+//     {//question 1: quizContent[0]
+//         question: "If javaScript was an icecream, what flavor would it be?",
+//         choices: [
+//             "coffee",
+//             "rockyRoad",
+//             "vanilla",
+//             "allTheAbove"],
+//         answer:"allTheAbove"
+//     },
+//     {//question 2: quizContent[1]
+//         question: "What does DOM stand for?",
+//         choices: [
+//             "departmentOfMondays",
+//             "dressingOddMonkeys",
+//             "documentObjectModel",
+//             "defendOurMemories"],
+//         answer:"documentObjectModel"
+//     },
+//     {//question 3: quizContent[2]
+//         question: "What purpose does JavaScript have on a browser's content?",
+//         choices: [
+//             "makesItPretty",
+//             "allowsAnInteractiveExperience",
+//             "disablesAllFunctionality", "deliversHotCoffeeToYourDeskForFocusedWebSurfing"],
+//         answer:"allowsAnInteractiveExperience"
+//     },
+//     {//question 4: quizContent[3]
+//         question: "Which of these is NOT a <button> type?",
+//         choices: [
+//             "reset",
+//             "zipper",
+//             "button",
+//             "submit"],
+//         answer:"zipper"
+//     }];
 
 
 
