@@ -232,6 +232,12 @@ const userInputHandler = function(event) {
     let userNameInput = document.querySelector("input[name='user']").value;
     console.dir(userNameInput);
 
+    // form input validation
+    if (!userNameInput) {
+        alert("You must include your name!");
+        return false;
+    }
+    formEl.requestFullscreen();
     // package up as data object
     let userDataObj = {
         name: userNameInput,
